@@ -1,0 +1,51 @@
+package com.neu.reviewerfinder.hibernate.dao;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+
+import com.neu.reviewerfinder.hibernate.HibernateSetup;
+import com.neu.reviewerfinder.hibernate.conf.ConferenceConf;
+
+public class ConferenceDaoImpl implements ConferenceDao{
+	@Override
+	public void createAndStoreConference(String conferenceKey, String name, String detail) {
+		Session session = HibernateSetup.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        ConferenceConf theConference = new ConferenceConf();
+        theConference.setConf_key(conferenceKey);
+        theConference.setName(name);
+        theConference.setDetail(detail);
+        session.save(theConference);
+        session.getTransaction().commit();
+	}
+	@Override
+	public List<ConferenceConf> getConferences() {
+		Session session = HibernateSetup.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+        @SuppressWarnings("unchecked")
+		List<ConferenceConf> result = session.createCriteria(ConferenceConf.class).list();
+        session.getTransaction().commit();
+        return result;
+	}
+	@Override
+	public void storeConferences(List<ConferenceConf> conferenceConfList) {
+		Session session = null;
+		try {
+			session = HibernateSetup.getSessionFactory().getCurrentSession();
+	        session.beginTransaction();
+	        Iterator<ConferenceConf> it = conferenceConfList.iterator();
+	        while(it.hasNext()){
+	        	ConferenceConf theConference = it.next();
+	        	session.persist(theConference);
+	        }
+		}catch (HibernateException e) {
+			throw new HibernateException("Cannot save member", e);
+		} 
+//		finally {
+//			session.getTransaction().commit();
+//		}
+	}
+}

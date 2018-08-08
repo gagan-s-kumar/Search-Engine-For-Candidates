@@ -1,0 +1,66 @@
+package com.neu.reviewerfinder.backend;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Conference {
+	public String key;
+	public String name;
+	public String detail;
+	public String volume;
+	public String url;
+	public List<String> authors;
+	
+	public static final int OTHER = 0;
+	public static final int PROCEEDING = 1;
+	public static final int PUBLISHER = 2;
+	public static final int DETAIL = 3;
+	public static final int VOLUME = 4;
+	public static final int AUTHOR = 5;
+	public static final int URL = 6;
+	
+	public static int getElement(String name) {
+		if (name.equals("proceedings")) {
+			return PROCEEDING;
+		} else if (name.equals("booktitle") || name.equals("publisher")) {
+			return PUBLISHER;
+		} else if (name.equals("title")) {
+			return DETAIL;
+		} else if (name.equals("volume") || name.equals("isbn")) {
+			return VOLUME;
+		} else if (name.equals("editor")) {
+			return AUTHOR;
+		} else if (name.equals("url")) {
+			return URL;
+		} else {
+			return OTHER;
+		}
+	}
+
+	public static String getElementName(int i) {
+		if (i == PROCEEDING) {
+			return "inproceedings";
+		} else if (i == PUBLISHER) {
+			return "booktitle";
+		} else if (i == DETAIL) {
+			return "title";
+		} else if (i == VOLUME) {
+			return "volume";
+		} else if (i == AUTHOR) {
+			return "editor";
+		} else if (i == URL) {
+			return "url";
+		} else {
+			return "other";
+		}
+	}
+
+	public Conference() {
+		this.key = "";
+		this.name = "";
+		this.detail = "";
+		this.volume = "";
+		this.url = "";
+		this.authors = new ArrayList<String>();
+	}
+}

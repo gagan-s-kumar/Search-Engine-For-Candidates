@@ -1,0 +1,11 @@
+package com.neu.reviewerfinder.hibernate.dao;
+
+import java.util.List;
+
+import com.neu.reviewerfinder.hibernate.conf.ConferenceConf;
+
+public interface ConferenceDao {
+	void createAndStoreConference(String conferenceKey, String name,String detail);
+	List<ConferenceConf> getConferences();
+	void storeConferences(List<ConferenceConf> conferenceconfList);
+}

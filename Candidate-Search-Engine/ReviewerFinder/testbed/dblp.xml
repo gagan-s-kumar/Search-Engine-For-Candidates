@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE dblp SYSTEM "dblp.dtd">
+<dblp>
+<article mdate="2003-11-25" key="journals/acta/Broy01">
+<author>Manfred Broy</author>
+<title>Letter from the Editor.</title>
+<pages>227-228</pages>
+<year>2001</year>
+<volume>37</volume>
+<journal>Acta Inf.</journal>
+<number>4/5</number>
+<ee>http://link.springer.de/link/service/journals/00236/bibs/1037004/10370227.htm</ee>
+<url>db/journals/acta/acta37.html#Broy01</url>
+</article>
+<article mdate="2011-01-11" key="journals/acta/Hartmanis72"> 
+<author>Juris Hartmanis</author>
+<title>On Non-Determinancy in Simple Computing Devices.</title>
+<journal>Acta Inf.</journal>
+<volume>1</volume> 
+<year>1972</year> 
+<pages>336-344</pages>
+<url>db/journals/acta/acta1.html#Hartmanis72</url>
+<ee>http://dx.doi.org/10.1007/BF00289513</ee>
+</article>
+<proceedings mdate="2016-03-11" key="journals/thipeac/2009-2">
+<editor>Per Stenstr&ouml;m</editor>
+<title>Transactions on High-Performance Embedded Architectures and Compilers II</title>
+<volume>5470</volume>
+<year>2009</year>
+<ee>http://dx.doi.org/10.1007/978-3-642-00904-4</ee>
+<isbn>978-3-642-00903-7</isbn>
+<booktitle>Trans. HiPEAC</booktitle>
+<series href="db/journals/lncs.html">Lecture Notes in Computer Science</series>
+<publisher>Springer</publisher>
+<url>db/journals/thipeac/thipeac2.html</url>
+</proceedings>
+<inproceedings mdate="2011-06-14" key="journals/lncs/Ludewig91">
+<author>Petra Ludewig</author>
+<title>Incremental Vocabulary Extensions in Text Understanding Systems.</title>
+<pages>153-166</pages>
+<year>1991</year>
+<crossref>journals/lncs/1991-546</crossref>
+<booktitle>Text Understanding in LILOG</booktitle>
+<url>db/journals/lncs/lncs546.html#Ludewig91</url>
+<ee>http://dx.doi.org/10.1007/3-540-54594-8_59</ee>
+</inproceedings>
+<inproceedings mdate="2011-06-14" key="journals/lncs/FranchittiK93">
+<author>Jean-Claude Franchitti</author>
+<author>Roger King</author>
+<title>Amalgame: A Tool for Creating Interoperating, Persistent, Heterogeneous Components.</title>
+<pages>313-336</pages>
+<year>1993</year>
+<crossref>journals/lncs/1993-759</crossref>
+<booktitle>Advanced Database Systems</booktitle>
+<url>db/journals/lncs/lncs759.html#FranchittiK93</url>
+<ee>http://dx.doi.org/10.1007/3-540-57507-3_16</ee>
+</inproceedings>
+<article mdate="2016-11-15" key="journals/ijmi/DerayS13">
+<title>Retraction notice to "Designing for healthy living: Supporting reflectivity on interactions in healthcare" [Int. J. Med. Inform. 80(2011) e230-e244].</title>
+<pages>276</pages>
+<ee>http://dx.doi.org/10.1016/j.ijmedinf.2013.01.010</ee>
+<year>2013</year>
+<volume>82</volume>
+<journal>I. J. Medical Informatics</journal>
+<number>4</number>
+<url>db/journals/ijmi/ijmi82.html#DerayS13</url>
+<cite>journals/ijmi/DerayS11</cite>
+</article>
+</dblp>

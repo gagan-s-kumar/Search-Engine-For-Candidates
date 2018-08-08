@@ -1,0 +1,7 @@
+
+com.neu.reviewerfinder.backend
+com.neu.reviewerfinder.database
+com.neu.reviewerfinder.queryengine
+com.neu.reviewerfinder.shared.model
+com.neu.reviewerfinder.test
+com.neu.reviewerfinder.ui

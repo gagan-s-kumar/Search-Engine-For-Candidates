@@ -1,0 +1,72 @@
+package com.neu.reviewerfinder.hibernate.conf;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+
+
+@Entity
+@Table(name="Conference")
+public class ConferenceConf {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hilo_sequence_generator")
+    @GenericGenerator(
+            name = "hilo_sequence_generator",
+            strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+            parameters = {
+                    @Parameter(name = "sequence_name", value = "hilo_sequence"),
+                    @Parameter(name = "initial_value", value = "1"),
+                    @Parameter(name = "increment_size", value = "1000000"),
+                    @Parameter(name = "optimizer", value = "hilo")
+            })
+	@Column(name="conference_id")
+    private Long id;
+	
+	@Column(name="conf_key",length=100)
+	private String conf_key;
+	
+	@Column(name="name",length = 100000)
+	private String name;
+	
+	@Column(name="detail",length = 100000)
+	private String detail;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getConf_key() {
+		return conf_key;
+	}
+
+	public void setConf_key(String conf_key) {
+		this.conf_key = conf_key;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDetail() {
+		return detail;
+	}
+
+	public void setDetail(String detail) {
+		this.detail = detail;
+	}
+}
